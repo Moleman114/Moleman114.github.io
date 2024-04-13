@@ -6,32 +6,39 @@
     <title>Projects - Jett's Portfolio</title>
     <link href="/css/bootstrap.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <style>
+        .btn {
+            padding: .45rem 1.5rem .35rem;
+        }
+
+        .gradient-custom {
+            background: #c471f5;
+            background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+            background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
+        }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg gradient-custom">
     <div class="container">
         <a class="navbar-brand" href="index.html">Jett's Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html"> <i class="bi bi-house"></i>
-                        Home</a>
+                    <a class="nav-link" aria-current="page" href="index.html"> <i class="bi bi-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html"> <i class="bi bi-box"></i> Projects</a>
+                    <a class="nav-link active" href="projects.html"> <i class="bi bi-box"></i> Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/jett-bolen/"> <i
-                            class="bi bi-linkedin"></i></a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/jett-bolen/"> <i class="bi bi-linkedin"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/Moleman114"> <i class="bi bi-github"></i></a>
@@ -44,48 +51,136 @@
 <div class="container py-5">
     <h1 class="fw-bold">Projects</h1>
     <p>Below are some of the projects I've worked on that effectively showcase my skills. Click on the 'Details' buttons
-    to view more information about each project</p>
+        to view more information about each project</p>
 
     <!-- cards -->
-    <div class="">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-between g-4">
 
-        <div class="card border border-black border-2" style="width: 18rem;">
-            <img src="/media/FoodFinder1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">FoodFinder</h5>
-                <p class="card-text">A frontend expressJS website using a publicly available API</p>
-                <div class="text-center">
-                    <button class="btn btn-primary">Details</button>
+        <div class="col mb-4">
+            <div class="card border border-black border-2" style="width: 18rem;">
+                <img src="/media/FoodFinder2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Stories of the Land</h5>
+                    <p class="card-text">An ASP.NET Core web application using Entity Framework</p>
+                    <div class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sotlModal">Details</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card border border-black border-2" style="width: 18rem;">
-            <img src="/media/MTGAPI1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">MTG Database</h5>
-                <p class="card-text">A full stack expressJS website using a custom-made API</p>
-                <div class="text-center">
-                    <button class="btn btn-primary">Details</button>
+        <div class="col mb-4">
+            <div class="card border border-black border-2" style="width: 18rem;">
+                <img src="/media/FoodFinder1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FoodFinder</h5>
+                    <p class="card-text">A frontend expressJS website using a publicly available API</p>
+                    <div class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#foodFinderModal">Details</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card border border-black border-2" style="width: 18rem;">
-            <img src="/media/Saskpolyhack1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Saskpolytech Hack 2024</h5>
-                <p class="card-text">A mockup for a social calendar web app designed for the first ever Saskpolytech Hackathon </p>
-                <div class="text-center">
-                    <button class="btn btn-primary">Details</button>
+        <div class="col mb-4">
+            <div class="card border border-black border-2" style="width: 18rem;">
+                <img src="/media/MTGAPI1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MTG Database</h5>
+                    <p class="card-text">A full stack expressJS website using a custom-made API</p>
+                    <div class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mtgDatabaseModal">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card border border-black border-2" style="width: 18rem;">
+                <img src="/media/Saskpolyhack1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Saskpolytech Hack 2024</h5>
+                    <p class="card-text">A mockup for a social calendar web app designed for the first ever Saskpolytech Hackathon</p>
+                    <div class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#saskpolytechModal">Details</button>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-
-
 </div>
+
+
+<!-- Modals -->
+<div class="modal fade" id="sotlModal" tabindex="-1" aria-labelledby="sotlModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sotlModalLabel">Stories of the Land Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add extra information here for FoodFinder -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="foodFinderModal" tabindex="-1" aria-labelledby="foodFinderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="foodFinderModalLabel">FoodFinder Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add extra information here for FoodFinder -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mtgDatabaseModal" tabindex="-1" aria-labelledby="mtgDatabaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mtgDatabaseModalLabel">MTG Database Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add extra information here for MTG Database -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="saskpolytechModal" tabindex="-1" aria-labelledby="saskpolytechModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="saskpolytechModalLabel">Saskpolytech Hack 2024 Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add extra information here for Saskpolytech Hack 2024 -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="bg-dark text-light py-2">
