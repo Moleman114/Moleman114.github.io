@@ -9,38 +9,42 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <style>
+
+        body {
+            --portfolio-gradient: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+            --portfolio-gradient-border: #c471f5;
+        }
+
         .btn {
             padding: .45rem 1.5rem .35rem;
         }
 
-        .gradient-custom {
-            background: #c471f5;
-            background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
-            background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
+        .navbar.bg-primary {
+            background: var(--portfolio-gradient-border);
+            background: var(--portfolio-gradient);
+
+            border-color: var(--portfolio-gradient-border);
+            border-width: 1px;
+            border-right: none;
         }
 
-        /* class for cards on the page that link to respective modals */
-        .project-card:hover,
-        .project-card:hover img {
-            filter: grayscale(100%);
+        .btn.btn-primary {
+            background: var(--portfolio-gradient-border);
+            background: var(--portfolio-gradient);
+
+            border-color: var(--portfolio-gradient-border);
         }
 
-        .project-card:hover::before,
-        .project-card:hover img::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(125, 125, 125, 0.5); /* Adjust the RGBA values and opacity as needed */
+        .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus{
+            border-color: var(--portfolio-gradient-border);
         }
+
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg gradient-custom">
+<nav class="navbar navbar-expand-lg bg-primary">
     <div class="container">
         <a class="navbar-brand" href="index.html">Jett's Portfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
